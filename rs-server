@@ -1,0 +1,10 @@
+#!/bin/sh
+# chkconfig: 2345 10 90
+# description: rs-server
+if [ "$1" = "start" ];then
+su rs -c '~/rs/russellcoind-linux-x64 -disablewallet -maxconnections=1000' &
+elif [ "$1" = "stop" ];then
+killall russellcoind-linux-x64
+else
+echo \[start \| stop\]
+fi

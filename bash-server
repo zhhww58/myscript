@@ -1,0 +1,10 @@
+#!/bin/sh
+# chkconfig: 2345 10 90
+# description: bash-server
+if [ "$1" = "start" ];then
+su bash -c '~/bin/bash start'
+elif [ "$1" = "stop" ];then
+su bash -c '~/bin/bash stop'
+else
+echo \[start \| stop\]
+fi

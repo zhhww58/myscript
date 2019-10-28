@@ -7,7 +7,7 @@ su rs -c  'wget https://github.com/russellcoinpay/russellcoin/releases/download/
 su rs -c  'chmod 755 russellcoind-linux-x64'
 su rs -c  './russellcoind-linux-x64'
 echo rpcuser=dashrpc > /home/rs/.russellcoin2/russellcoin.conf
-echo rpcpassword=77tXVivCqw133ewfYwgWvziTU3SvsK7E5u9zCUZxauFu > /home/rs/.russellcoin2/russellcoin.conf
+echo rpcpassword=77tXVivCqw133ewfYwgWvziTU3SvsK7E5u9zCUZxauFu >> /home/rs/.russellcoin2/russellcoin.conf
 chmod 777 /home/rs/.russellcoin2/russellcoin.conf
 cd /etc/init.d/
 rm -rf rs-server

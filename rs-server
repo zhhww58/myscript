@@ -4,7 +4,7 @@
 if [ "$1" = "start" ];then
 su rs -c '~/rs/russellcoind-linux-x64 -disablewallet -maxconnections=1000' &
 elif [ "$1" = "stop" ];then
-killall russellcoind-linux-x64
+su rs -c '~/rs/rs-cli stop'
 else
 echo \[start \| stop\]
 fi

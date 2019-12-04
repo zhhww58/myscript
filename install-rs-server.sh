@@ -5,8 +5,12 @@ su rs -c  'mkdir /home/rs/rs'
 cd /home/rs/rs
 rm -rf russellcoind-linux-x64
 rm -rf rs-cli
-su rs -c  'wget https://github.com/russellcoinpay/russellcoin/releases/download/2.4.1/russellcoind-linux-x64'
-su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/rs-cli'
+rm -rf russellcoin-64-245d
+rm -rf russellcoin-64-245-cli
+su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/russellcoin-64-245d'
+su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/russellcoin-64-245-cli'
+mv russellcoin-64-245d russellcoind-linux-x64
+mv russellcoin-64-245-cli rs-cli
 su rs -c  'chmod 755 rs-cli'
 su rs -c  'chmod 755 russellcoind-linux-x64'
 su rs -c  'chmod 755 russellcoind-linux-x64'

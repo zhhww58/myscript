@@ -3,11 +3,6 @@ systemctl stop rs-server
 systemctl disable rs-server
 killall -9 russellcoind-linux-x64
 
-if [ -f "/data/filename" ];then
-  echo "文件存在"
-  else
-  echo "文件不存在"
-fi
 
 echo |adduser rs --disabled-password --disabled-login
 su rs -c  'mkdir /home/rs/rs'

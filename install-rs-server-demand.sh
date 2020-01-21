@@ -3,18 +3,25 @@ systemctl stop rs-server
 systemctl disable rs-server
 killall -9 russellcoind-linux-x64
 
+if [ -f "/data/filename" ];then
+  echo "文件存在"
+  else
+  echo "文件不存在"
+fi
+
 echo |adduser rs --disabled-password --disabled-login
 su rs -c  'mkdir /home/rs/rs'
 cd /home/rs/rs
-rm -rf /home/rs/rs/russellcoind-linux-x64
-rm -rf /home/rs/rs/rs-cli
 rm -rf /etc/init.d/rs-server
-rm -rf russellcoind-linux-x64
-rm -rf rs-cli
-rm -rf russellcoin-64-245d
-rm -rf russellcoin-64-245-cli
-su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/russellcoind-linux-x64'
-su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/rs-cli'
+
+if [ -f "/home/rs/rs/russellcoind-linux-x64" ];then
+    echo
+  else
+    su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/russellcoind-linux-x64'
+    su rs -c  'wget https://github.com/zhhww58/myscript/raw/master/rs-cli'
+fi
+
+
 su rs -c  'chmod 755 rs-cli'
 su rs -c  'chmod 755 russellcoind-linux-x64'
 su rs -c  'mkdir /home/rs/.russellcoin2/'

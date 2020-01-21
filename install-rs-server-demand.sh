@@ -37,8 +37,8 @@ chmod 755 /home/rs/.russellcoin2/russellcoin.conf
 chown -R rs:rs /home/rs/.russellcoin2/russellcoin.conf
 rm -rf /usr/bin/start-rs
 rm -rf /usr/bin/rs-cli
-echo su -c '"/home/rs/rs/russellcoind-linux-x64 $1 $2 $3 $4 $5 $6 $7"' >/home/rs/rs/start-rs.sh
-echo su -c '"/home/rs/rs/rs-cli $1 $2 $3 $4 $5 $6 $7"' >/home/rs/rs/rs-cli.sh
+echo su rs -c '"/home/rs/rs/russellcoind-linux-x64 $1 $2 $3 $4 $5 $6 $7"' >/home/rs/rs/start-rs.sh
+echo su rs -c '"/home/rs/rs/rs-cli $1 $2 $3 $4 $5 $6 $7"' >/home/rs/rs/rs-cli.sh
 chmod 777 /home/rs/rs/start-rs.sh
 chmod 777 /home/rs/rs/rs-cli.sh
 rm -rf /usr/bin/start-rs

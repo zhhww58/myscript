@@ -2,7 +2,7 @@
 systemctl stop rs-server
 systemctl disable rs-server
 rs-cli stop
-killall -9 russellcoin-64-245d
+
 
 echo |adduser rs --disabled-password --disabled-login
 su rs -c  'mkdir /home/rs/rs'
